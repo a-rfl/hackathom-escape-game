@@ -1,2 +1,128 @@
-// @import "@fortawesome/fontawesome-free/css/all.css";
+@import "@fortawesome/fontawesome-free/css/all.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
+
+$total-height: 100vh;
+$title-color: #53917e;
+$text-color: #fff;
+$btn-color: #212d40;
+$border-color: #707070;
+$error-color: #f97171;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $text-color;
+}
+canvas {
+  display: none;
+  width: 100%;
+  height: $total-height;
+}
+section {
+  height: $total-height;
+  background-image: url("static/bg-linux.jpg");
+  background-size: cover;
+  text-align: center;
+  .transparent-bg {
+    height: $total-height;
+    background-color: rgba(33, 45, 64, 0.8);
+    h1 {
+      margin-top: 0;
+      color: $title-color;
+    }
+    p {
+      width: 75%;
+    }
+    #user-info {
+      p {
+        margin: 0 auto;
+      }
+      input {
+        width: 350px;
+        height: 30px;
+        margin: 5px 0;
+        border-radius: 20px;
+        border: 1px solid $border-color;
+        line-height: 0;
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+    .btn-play {
+      border: 0;
+      background-color: transparent;
+      color: $text-color;
+    }
+  }
+}
+.error {
+  margin-right: 5px;
+  color: $error-color;
+  font-size: 25px;
+}
+
+@media only screen and (min-width: 500px) {
+  section {
+    background-position: 60%;
+    h1 {
+      padding-top: 2%;
+      font-size: 42px;
+    }
+    p {
+      margin: 5% auto;
+      font-size: 16px;
+      line-height: 25px;
+    }
+    #user-info {
+      margin-top: 5%;
+    }
+    .btn-play {
+      margin-top: 50px;
+      font-size: 75px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  section {
+    background-position: center;
+    h1 {
+      padding-top: 1%;
+      font-size: 50px;
+    }
+    p {
+      margin: 3.5% auto;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    #user-info {
+      margin-top: 4%;
+    }
+    .btn-play {
+      margin-top: 45px;
+      font-size: 100px;
+    }
+  }
+}
+@media only screen and (min-width: 1900px) {
+  section {
+    background-position: center;
+    h1 {
+      padding-top: 3%;
+    }
+    p {
+      margin: 5% auto;
+      line-height: 40px;
+      font-size: 20px;
+    }
+    #user-info {
+      margin: 30px 0 50px 0;
+    }
+    .btn-play {
+      margin-top: 75px;
+    }
+  }
+}
