@@ -1,2 +1,71 @@
-// @import "@fortawesome/fontawesome-free/css/all.css";
+@import "@fortawesome/fontawesome-free/css/all.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
+
+$total-height: 100vh;
+$title-color: #53917e;
+$selected-response-color: #53917ec4;
+$light-color: #fff;
+$dark-color: #212d40;
+$border-color: #a09f9f;
+$error-color: #f97171;
+$close-color: #b8b5b5;
+
+.enigme,
+.resultat-enigme {
+  position: relative;
+  width: 250px;
+  background-color: $light-color;
+  border: 1px solid $close-color;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  .far {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    color: $close-color;
+  }
+  p {
+    color: $dark-color;
+  }
+  .reponse-enigme,
+  input {
+    width: 60%;
+    margin: 5px auto;
+    background-color: $light-color;
+    border-radius: 20px;
+    border: 1px solid $selected-response-color;
+    // text-transform: capitalize;
+    text-align: center;
+    color: $dark-color;
+  }
+  .active {
+    background-color: #53917ec4;
+    color: #fff;
+  }
+  button {
+    width: 175px;
+    height: 25px;
+    display: block;
+    margin: 15px auto 5px auto;
+    border: 0;
+    background-color: $dark-color;
+    color: $light-color;
+    border-radius: 8px;
+  }
+  .resultat-enigme-text {
+    text-transform: uppercase;
+    margin: 35px 0;
+  }
+  .win {
+    color: $title-color;
+  }
+  .lose {
+    color: $error-color;
+  }
+}
+.error {
+  margin-right: 5px;
+  color: $error-color;
+  font-size: 25px;
+}
