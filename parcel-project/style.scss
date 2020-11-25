@@ -3,8 +3,8 @@
 
 $total-height: 100vh;
 $title-color: #53917e;
-$text-color: #fff;
-$btn-color: #212d40;
+$light-color: #fff;
+$dark-color: #212d40;
 $border-color: #707070;
 $error-color: #f97171;
 
@@ -14,7 +14,7 @@ $error-color: #f97171;
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: $text-color;
+  color: $light-color;
 }
 canvas {
   display: none;
@@ -54,7 +54,7 @@ section {
     .btn-play {
       border: 0;
       background-color: transparent;
-      color: $text-color;
+      color: $light-color;
     }
   }
 }
