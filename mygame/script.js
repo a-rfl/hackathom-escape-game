@@ -1,6 +1,3 @@
-// import './style.scss';
-// import $ from 'jquery';
-
 const enigmes = [
   {
     objet: 'stallman',
@@ -21,15 +18,16 @@ let error = false;
 $('.btn-play').on('click', () => {
   if ($('#name-user').val() !== '') {
     // Récupération du nom entré par l'utilisateur + sauvagarde dans le localStorage
-    // localStorage.setItem('userName', JSON.stringify($('#name-user').val()));
+    localStorage.setItem('userName', JSON.stringify($('#name-user').val()));
     // Passage de la homepage au jeu (balise canvas)
     $('.home').css('display', 'none');
     $('.canvas').css('display', 'block');
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/mygame.json", { onProgress: UnityProgress });
   } else if (!error) {
     $('#name-user').css({
       'background-color': '#F97171',
     });
-    $('#user-info').append('<p ><i class="fas fa-exclamation-circle error"></i>Aucun nom entré.</p>');
+    $('#user-info').append('<p><i class="fas fa-exclamation-circle error"></i>Aucun nom entré.</p>');
     error = true;
   }
 });
