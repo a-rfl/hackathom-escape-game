@@ -12,10 +12,12 @@ $close-color: #b8b5b5;
 
 
 .test { 
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background-color: #212d40;
   margin-top: 5px;
+  color: $light-color;
+  text-align: center;
 }
 
 .enigme,

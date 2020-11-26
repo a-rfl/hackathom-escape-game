@@ -45,13 +45,6 @@ export const verifyResponse = (val, objet) => {
   });
 };
 
-// function activeEnigma(enigmaName) {
-//   showEnigma(getEnigma(Pointer_stringify(enigmaName)));
-// }
-// function getEnigma(enigmaName) {
-//   return enigmaName.split('-')[1];
-// }
-
 // (String) => void
 // Fonction qui permet de générer une popup avec une énigme en fonction de l'objet séléctionné
 export const showEnigma = (objet) => {
@@ -68,12 +61,13 @@ export const showEnigma = (objet) => {
             popupEnigme += `<div class="reponse-enigme ipt-enigme" id="${proposition}">${proposition}</div>`;
           });
         }
-        popupEnigme+= `<p class="infotext" style="display:none;">${enigme.indice}</p>`;
+        popupEnigme += `<p class="infotext" style="display:none;">${enigme.indice}</p>`;
         popupEnigme += '<button class="btn-enigme">C\'est mon dernier mot</button></div>';
+
         $('body').append(popupEnigme);
-        $(".info").on("click", function(){
-          $('.infotext').css("display", "block");
-          console.log("hellooooo");
+        $('.info').on('click', () => {
+          $('.infotext').css('display', 'block');
+          console.log('hellooooo');
           console.log(enigme.indice);
         });
       }
@@ -94,11 +88,12 @@ export const showEnigma = (objet) => {
 
     // Vérification de la réponse au clique sur un bouton
     $('.btn-enigme').on('click', () => {
+      console.log('test');
       if ($('.ipt-enigme').hasClass('active')) {
-        verifyResponse($('.active').text(), 'clé');
+        verifyResponse($('.active').text(), objet);
       } else {
         console.log($('.ipt-enigme').val());
-        verifyResponse($('.ipt-enigme').val(), 'chapeau');
+        verifyResponse($('.ipt-enigme').val(), objet);
       }
     });
   });
