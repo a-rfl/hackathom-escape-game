@@ -3,12 +3,12 @@ import { enigmes } from '../data/enigmes';
 
 // (String, String) => void
 // Fonction qui vérifie l'état de la réponse et change le contenu de la popup en fonction
-export const verifieReponse = (val, objet) => {
+export const verifyResponse = (val, objet) => {
   enigmes.forEach((enigme) => {
     if (enigme.objet === objet) {
       if (val === enigme.bonneReponse) {
         // Chaque la popup contenant l'éngime
-        $('.enigme').hide();
+        $(`#enigme-${enigme.objet}`).hide();
         // Affiche la popup contenant le résultat
         $('body').append(`
           <div class="resultat-enigme popup">
@@ -17,7 +17,7 @@ export const verifieReponse = (val, objet) => {
           </div>`);
       } else {
         // Chaque la popup contenant l'éngime
-        $('.enigme').hide();
+        $(`#enigme-${enigme.objet}`).hide();
         // Affiche la popup contenant le résultat
         $('body').append(`
           <div class="resultat-enigme popup">
@@ -27,34 +27,45 @@ export const verifieReponse = (val, objet) => {
           </div>`);
         // Lors du clique sur le bouton "Réessayer", la popup enigme se remontre
         $('.btn-essai').on('click', () => {
-          $('.resultat-enigme').hide();
-          $('.enigme').show();
+          $('.resultat-enigme').remove();
+          $(`#enigme-${enigme.objet}`).show();
         });
       }
       // Permet de fermer la popup
       $('.close').on('click', () => {
-        $('.popup').hide();
+        $('.popup').remove();
       });
     }
   });
 };
 
+function activeEnigma(enigmaName) {
+  showEnigma(getEnigma(Pointer_stringify(enigmaName)));
+}
+
+function getEnigma(enigmaName) {
+  return enigmaName.split('-')[1];
+}
+
 // (String) => void
 // Fonction qui permet de générer une popup avec une énigme en fonction de l'objet séléctionné
 export const showEnigma = (objet) => {
-  let popupEnigme = '<div class="enigme popup"><i class="far fa-times-circle close"></i>';
   enigmes.forEach((enigme) => {
-    if (enigme.objet === objet) {
-      popupEnigme += `<p class="text-enigme">${enigme.enonce}</p>`;
-      if (enigme.reponsesProposees.length === 0) {
-        popupEnigme += '<input type="text" class="ipt-enigme"/>';
-      } else {
-        enigme.reponsesProposees.forEach((proposition) => {
-          popupEnigme += `<div class="reponse-enigme ipt-enigme" id="${proposition}">${proposition}</div>`;
-        });
+    console.log($(`#enigme-${enigme.objet}`));
+    if ($(`#enigme-${enigme.objet}`).length === 0) {
+      let popupEnigme = `<div class="enigme popup" id="enigme-${enigme.objet}"><i class="far fa-times-circle close"></i>`;
+      if (enigme.objet === objet) {
+        popupEnigme += `<p class="text-enigme">${enigme.enonce}</p>`;
+        if (enigme.reponsesProposees.length === 0) {
+          popupEnigme += '<input type="text" class="ipt-enigme"/>';
+        } else {
+          enigme.reponsesProposees.forEach((proposition) => {
+            popupEnigme += `<div class="reponse-enigme ipt-enigme" id="${proposition}">${proposition}</div>`;
+          });
+        }
+        popupEnigme += '<button class="btn-enigme">C\'est mon dernier mot</button></div>';
+        $('body').append(popupEnigme);
       }
-      popupEnigme += '<button class="btn-enigme">C\'est mon dernier mot</button></div>';
-      $('body').append(popupEnigme);
     }
 
     // Change le style de la réponse sélectionnée en lui ajoutant ou retirant une classe
@@ -73,9 +84,10 @@ export const showEnigma = (objet) => {
     // Vérification de la réponse au clique sur un bouton
     $('.btn-enigme').on('click', () => {
       if ($('.ipt-enigme').hasClass('active')) {
-        verifieReponse($('.active').text(), 'clé');
+        verifyResponse($('.active').text(), 'clé');
       } else {
-        verifieReponse($('.ipt-enigme').val(), 'chapeau');
+        console.log($('.ipt-enigme').val());
+        verifyResponse($('.ipt-enigme').val(), 'chapeau');
       }
     });
   });
