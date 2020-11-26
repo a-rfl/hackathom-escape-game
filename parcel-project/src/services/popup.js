@@ -6,7 +6,13 @@ import { enigmes } from '../data/enigmes';
 export const verifyResponse = (val, objet) => {
   enigmes.forEach((enigme) => {
     if (enigme.objet === objet) {
-      if (val === enigme.bonneReponse) {
+      let bonneReponse = false;
+      enigme.bonneReponse.forEach((reponse) => {
+        if (val === reponse) {
+          bonneReponse = true;
+        }
+      });
+      if (bonneReponse) {
         // Chaque la popup contenant l'éngime
         $(`#enigme-${enigme.objet}`).hide();
         // Affiche la popup contenant le résultat
@@ -39,13 +45,12 @@ export const verifyResponse = (val, objet) => {
   });
 };
 
-function activeEnigma(enigmaName) {
-  showEnigma(getEnigma(Pointer_stringify(enigmaName)));
-}
-
-function getEnigma(enigmaName) {
-  return enigmaName.split('-')[1];
-}
+// function activeEnigma(enigmaName) {
+//   showEnigma(getEnigma(Pointer_stringify(enigmaName)));
+// }
+// function getEnigma(enigmaName) {
+//   return enigmaName.split('-')[1];
+// }
 
 // (String) => void
 // Fonction qui permet de générer une popup avec une énigme en fonction de l'objet séléctionné
