@@ -58,7 +58,7 @@ export const showEnigma = (objet) => {
   enigmes.forEach((enigme) => {
     console.log($(`#enigme-${enigme.objet}`));
     if ($(`#enigme-${enigme.objet}`).length === 0) {
-      let popupEnigme = `<div class="enigme popup" id="enigme-${enigme.objet}"><i class="far fa-times-circle close"></i>`;
+      let popupEnigme = `<div class="enigme popup" id="enigme-${enigme.objet}"><i class="fas fa-info-circle info"></i><i class="far fa-times-circle close"></i>`;
       if (enigme.objet === objet) {
         popupEnigme += `<p class="text-enigme">${enigme.enonce}</p>`;
         if (enigme.reponsesProposees.length === 0) {
@@ -68,8 +68,14 @@ export const showEnigma = (objet) => {
             popupEnigme += `<div class="reponse-enigme ipt-enigme" id="${proposition}">${proposition}</div>`;
           });
         }
+        popupEnigme+= `<p class="infotext" style="display:none;">${enigme.indice}</p>`;
         popupEnigme += '<button class="btn-enigme">C\'est mon dernier mot</button></div>';
         $('body').append(popupEnigme);
+        $(".info").on("click", function(){
+          $('.infotext').css("display", "block");
+          console.log("hellooooo");
+          console.log(enigme.indice);
+        });
       }
     }
 

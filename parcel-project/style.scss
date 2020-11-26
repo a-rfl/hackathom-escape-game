@@ -80,3 +80,10 @@ $close-color: #b8b5b5;
   color: $error-color;
   font-size: 25px;
 }
+
+.info {
+  color:$close-color;
+  position:absolute;
+  top: 8px;
+  left: 10px;
+};
