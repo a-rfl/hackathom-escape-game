@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | My first game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/mygame.json", { onProgress: UnityProgress });
+  </script>
+</head>
+
+<body>
+  <section class="home">
+    <div class="transparent-bg">
+      <h1>
+        Escape Game <br />
+        Mais où est Linus ?
+      </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, error et, nesciunt a velit aliquam eligendi
+        laudantium voluptatem consequatur inventore asperiores amet ex non itaque voluptatibus possimus modi officiis
+        nam fugiat neque aperiam odit voluptatum. Laboriosam sint veritatis delectus deserunt magni eos aperiam
+        assumenda voluptatibus, sequi eligendi impedit quas nam dolore ipsam odit repellat consectetur itaque, aut
+        animi. Unde explicabo molestiae nostrum vel, velit eius tenetur iure est debitis quas omnis quasi sapiente nemo
+        accusamus? Pariatur cumque odio incidunt odit? Veritatis cumque sapiente dicta, reprehenderit magnam iure
+        voluptatem neque tempora, cupiditate voluptas adipisci illum aut harum! Praesentium tempora corrupti assumenda.
+      </p>
+
+      <div id="user-info">
+        <p>Entrer le nom de votre personnage</p>
+        <input type="text" name="name-user" id="name-user" />
+      </div>
+
+      <button class="btn-play" id="btn"><i class="fa fa-play-circle" aria-hidden="true"></i></button>
+    </div>
+  </section>
+
+  <div id="unityContainer" style="width: 100%; height: 100vh;display: none" class="canvas"></div>
+  <div class="footer">
+    <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+  </div>
+
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
