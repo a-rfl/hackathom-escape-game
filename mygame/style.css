@@ -128,46 +128,46 @@ p {
   padding: 5px;
   text-align: center;
 }
-  .enigme .far {
-    position: absolute;
-    top: 8px;
-    right: 10px;
-    color: #b8b5b5;
-  }
-  .enigme p {
-    color: #212d40;
-  }
-  .reponse-enigme, input {
-    width: 60%;
-    margin: 5px auto;
-    background-color: white;
-    border-radius: 20px;
-    border: 1px solid #53917ec4;
-    text-align: center;
-    color: #212d40;
-  }
-  .active {
-    background-color: #53917ec4;
-    color: #fff;
-  }
-  button {
-    width: 175px;
-    height: 25px;
-    display: block;
-    margin: 15px auto 5px auto;
-    border: 0;
-    background-color: #212d40;
-    color: white;
-    border-radius: 8px;
-  }
-  .resultat-enigme {
-    text-transform: uppercase;
-    margin: 35px 0;
-  }
-  .win {
-    color: #53917e;
-  }
-  .lose {
-    color: #f97171;
-  }
+.enigme .far {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #b8b5b5;
+}
+.enigme p {
+  color: #212d40;
+}
+.reponse-enigme,
+input {
+  width: 60%;
+  margin: 5px auto;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #53917ec4;
+  text-align: center;
+  color: #212d40;
+}
+.active {
+  background-color: #53917ec4;
+  color: #fff;
+}
+button {
+  width: 175px;
+  height: 25px;
+  display: block;
+  margin: 15px auto 5px auto;
+  border: 0;
+  background-color: #212d40;
+  color: white;
+  border-radius: 8px;
+}
+.resultat-enigme {
+  text-transform: uppercase;
+  margin: 35px 0;
+}
+.win {
+  color: #53917e;
+}
+.lose {
+  color: #f97171;
 }
