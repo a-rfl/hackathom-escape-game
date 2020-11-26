@@ -13,6 +13,10 @@ $close-color: #b8b5b5;
 .enigme,
 .resultat-enigme {
   position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 250px;
   background-color: $light-color;
   border: 1px solid $close-color;
@@ -35,7 +39,6 @@ $close-color: #b8b5b5;
     background-color: $light-color;
     border-radius: 20px;
     border: 1px solid $selected-response-color;
-    // text-transform: capitalize;
     text-align: center;
     color: $dark-color;
   }
