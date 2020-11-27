@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unity WebGL Player | My first game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate(
+        "unityContainer",
+        "Build/mygame.json",
+        { onProgress: UnityProgress }
+      );
+    </script>
+    <script type="text/javascript">
+      document.addEventListener("click", function (e) {
+        if (e.target.id == "#canvas") {
+          // Clicked on canvas
+          FocusCanvas("1");
+        } else {
+          // Clicked outside of canvas
+          FocusCanvas("0");
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <section class="home">
+      <div class="transparent-bg">
+        <h1>
+          Escape Game <br />
+          Mais où est Linus ?
+        </h1>
+        <p>
+          Depuis quelques semaines, Linus Torvald a disparu des radars...<br />
+          Étant un fervent adepte de son travail, pour savoir ce qu'il est
+          advenu de lui, vous décidez de vous rendre dans sa "linux-cave" :
+          simple petit (enfin petit... tout est relatif) appartement où il aime
+          se rendre lorsque le monde l'ennuie. <br />
+          Serez-vous prêt à découvrir de nouvelles facettes de cet homme, mais
+          également de son domaine de prédilection, l'informatique ? <br />
+          Vous vous rendez donc à l'appartement de Linus et vous trouvez ce mot
+          sur sa porte : <br /><br />
+          Salutations futur manchot!<br /><br />
+
+          Si tu trouves ce mot, c'est que tu es parti à ma recherche.
+          Malheureusement, je ne peux t’indiquer le lieu ou je me trouve, pas
+          pour l’instant.<br />
+          Si tu veux le découvrir, il va falloir que tu le mérites! Tu trouveras
+          ma localisation sur mon ordinateur, mais celui ci est protégé par un
+          mot de passe.<br />
+          Tu dois découvrir celui-ci à l’aide de trois grands de mes amis. Ils
+          seront là pour te diriger dans tes recherches. Résouds les énigmes
+          qu’ils te confieront, chaque récompense est un morceau du mot de passe
+          à entrer dans l’ordinateur. <br />
+          Va vite les voir, leur tableau est accroché au mur.<br /><br />
+
+          Bon courage,<br />
+          Linus TORVALDS
+        </p>
+
+        <!-- 
+          <div id="user-info">
+            <p>Entrer le nom de votre personnage</p>
+            <input type="text" name="name-user" id="name-user" />
+          </div>
+        -->
+
+        <button class="btn-play" id="btn">
+          <i class="fa fa-play-circle" aria-hidden="true"></i>
+        </button>
+      </div>
+    </section>
+
+    <div class="webgl-content" style="display: none">
+      <div id="unityContainer" style="width: 100vw; height: 100vh"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

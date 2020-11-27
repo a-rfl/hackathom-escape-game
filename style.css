@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  overflow-y: hidden;
+}
+
+.home {
+  height: 100vh;
+  background-image: url("static/bg-linux.jpg");
+  background-size: cover;
+  text-align: center;
+}
+.transparent-bg {
+  height: 100vh;
+  background-color: rgba(33, 45, 64, 0.8);
+}
+h1 {
+  margin-top: 0;
+  color: #53917e;
+}
+section p {
+  width: 60%;
+}
+#user-info p {
+  margin: 0 auto;
+}
+#user-info input {
+  width: 350px;
+  height: 30px;
+  margin: 5px 0;
+  border-radius: 20px;
+  border: 1px solid #a09f9f;
+  line-height: 0;
+  text-align: center;
+  font-size: 16px;
+}
+.btn-play {
+  border: 0;
+  background-color: transparent;
+  color: white;
+}
+.error {
+  margin-right: 5px;
+  color: #f97171;
+  font-size: 25px;
+}
+@media only screen and (min-width: 500px) {
+  .home {
+    background-position: 60%;
+  }
+  h1 {
+    padding-top: 2%;
+    font-size: 42px;
+  }
+  section p {
+    margin: 3% auto;
+    font-size: 16px;
+    line-height: 15px;
+  }
+  #user-info {
+    margin-top: 5%;
+  }
+  .btn-play {
+    margin-top: 50px;
+    font-size: 75px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home {
+    background-position: center;
+  }
+  h1 {
+    padding-top: 1%;
+    font-size: 50px;
+  }
+  section p {
+    margin: 2.5% auto;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  #user-info {
+    margin-top: 4%;
+  }
+  .btn-play {
+    margin-top: 45px;
+    font-size: 100px;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .home {
+    background-position: center;
+  }
+  h1 {
+    padding-top: 3%;
+  }
+  section p {
+    margin: 3% auto;
+    line-height: 30px;
+    font-size: 20px;
+  }
+  #user-info {
+    margin: 30px 0 50px 0;
+  }
+  .btn-play {
+    margin-top: 75px;
+  }
+}
+
+.enigme,
+.resultat-enigme {
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  background-color: white;
+  border: 1px solid #b8b5b5;
+  border-radius: 5px;
+  padding: 2px;
+  text-align: center;
+}
+.text-enigme {
+  color: #53917e;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.popup .far {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #b8b5b5;
+}
+.enigme p {
+  color: #212d40;
+}
+.reponse-enigme,
+input {
+  width: 60%;
+  margin: 5px auto;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #53917ec4;
+  text-align: center;
+  color: #212d40;
+}
+.active {
+  background-color: #53917ec4;
+  color: #fff;
+}
+button {
+  width: 175px;
+  height: 25px;
+  display: block;
+  margin: 15px auto 5px auto;
+  border: 0;
+  background-color: #212d40;
+  color: white;
+  border-radius: 8px;
+}
+.resultat-enigme-text {
+  text-transform: uppercase;
+  margin: 35px auto;
+}
+.resultat-enigme {
+  z-index: 1;
+  text-align: center;
+}
+.win {
+  color: #53917e;
+}
+.lose {
+  color: #f97171;
+}
+.error {
+  margin-right: 5px;
+  color: #f97171;
+  font-size: 25px;
+}
+
+.info {
+  color: #b8b5b5;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+}
+.titre-enigme {
+  text-decoration: underline overline;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.histoire-enigme {
+  font-style: italic;
+  letter-spacing: 2px;
+}
