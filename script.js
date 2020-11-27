@@ -7,7 +7,7 @@ const enigmes = [
     enonce:
       "Je suis le cadre du serpent mais aussi un guitariste de renom.<br>Je suis la boite à outils la plus legere qui soit, à la main gauche il me manque deux doigts.",
     reponsesProposees: [],
-    bonneReponse: ["Django", "django"],
+    bonneReponse: ["django"],
     indice:
       "Je suis un framework qui porte le nom d’un celebre joueur de jazz/manouche.",
     cle: "",
@@ -31,8 +31,6 @@ const enigmes = [
       "J’apparais au XVIIIe sciecle dans de multiples domaines.<br>Au XIXe, musique et tissage m’utilisaient sans modération.<br>Mais j’atteinds mon heure de gloire au XXe sciecle, avec la programmation.",
     reponsesProposees: [],
     bonneReponse: [
-      "La carte perforée",
-      "La carte perforee",
       "carte perforée",
       "carte perforee",
       "la carte perforée",
@@ -72,8 +70,8 @@ const enigmes = [
     titre: "",
     courteHistoire: `- Tux: "I won’t bite",<br>- Linus: "Yes, it will!"`,
     enonce: "",
-    reponsesProposees: [],
-    bonneReponse: [],
+    reponsesProposees: ['Euhhh okay...'],
+    bonneReponse: ['euhhh okay...'],
     indice: "",
     cle: "",
   },
@@ -102,7 +100,7 @@ const enigmes = [
     courteHistoire: "",
     enonce: `Pourtant pas un héro, je suis loin d'etre zéro.`,
     reponsesProposees: [],
-    bonneReponse: ["null", "NULL", "Null"],
+    bonneReponse: ["null"],
     indice: `En Python se dit "None".`,
     cle: "",
   },
@@ -113,7 +111,7 @@ const enigmes = [
     enonce:
       "En ce moment, on me croise tout le temps.<br>Je suis symbole de rassemblement et à l’inverse du chiffrement, je suis irréversible.",
     reponsesProposees: [],
-    bonneReponse: ["hash"], // attention fct convertion UPPERCASE ou lowcase de l'input reponse
+    bonneReponse: ["hash"],
     indice: "sécurité des mots de passe ou élément d'un micro-blog",
     cle: "",
   },
@@ -134,7 +132,7 @@ const enigmes = [
     enonce:
       "Au risque de me répéter, je n’ai pas d’autre utilité.<br>J’agis avant de réflechir ou bien je réflechis avant d'agir,<br>C'est selon vos conditions.",
     reponsesProposees: [],
-    bonneReponse: ["while", "boucle while", "While"],
+    bonneReponse: ["while", "boucle while"],
     indice: "je boucle",
     cle: "",
   },
@@ -162,8 +160,7 @@ const enigmes = [
   {
     objet: "alanTuring",
     titre: "Alan Turing (1912-1954)",
-    courteHistoire:
-      "J'ai proposé dès 1936, avant l’apparition des premiers ordinateurs,une machine abstraite, à instructions programmable, dont tous les ordinateurs d’aujourd’hui découlent. Durant la Seconde Guerre mondiale, j’ai aidé le gouvernement anglais en inventant une machine capable de déchiffrer les messages allemands produits par Enigma, réputée incraquable. On dit qu’ainsi la guerre a pu finir avec deux années d’avance ! Je suis fort heureux de constater tous les progrès qui sont faits depuis mes premiers travaux. J’ai toujours eu l’intuition qu’ un jour, on atteindrait des mécanismes si complexes qu’ils échapperaient au statut de simple mécanisme en rivalisant avec l’esprit humain. Reproduire les activités mentales de l’Homme.. Quel projet ! Malheureusement, ce n’est pas encore le cas. Je n’ai pas reçu la reconnaissance escomptée. J’ai dû subir un terrible procès, du a mon homosexualité. Forcé à la castration chimique, déprimé, je suis décédé dans des conditions tragiques.. Je me suis donné pour but de perpétuer les travaux de mon grand ami Christopher Morcom, brillant mathématicien, disparu trop tôt. J’ai ainsi accompli de grandes choses en sa mémoire. À toi d’en faire autant. Trouve les objets m’appartenant dans cette maison, ils te mettront sur la bonne voie.",
+    courteHistoire: "J'ai proposé dès 1936, avant l’apparition des premiers ordinateurs,une machine abstraite, à instructions programmable, dont tous les ordinateurs d’aujourd’hui découlent. Durant la Seconde Guerre mondiale, j’ai aidé le gouvernement anglais en inventant une machine capable de déchiffrer les messages allemands produits par Enigma, réputée incraquable. On dit qu’ainsi la guerre a pu finir avec deux années d’avance ! Je suis fort heureux de constater tous les progrès qui sont faits depuis mes premiers travaux. J’ai toujours eu l’intuition qu’ un jour, on atteindrait des mécanismes si complexes qu’ils échapperaient au statut de simple mécanisme en rivalisant avec l’esprit humain. Reproduire les activités mentales de l’Homme.. Quel projet ! Malheureusement, ce n’est pas encore le cas. Je n’ai pas reçu la reconnaissance escomptée. J’ai dû subir un terrible procès, du a mon homosexualité. Forcé à la castration chimique, déprimé, je suis décédé dans des conditions tragiques.. Je me suis donné pour but de perpétuer les travaux de mon grand ami Christopher Morcom, brillant mathématicien, disparu trop tôt. J’ai ainsi accompli de grandes choses en sa mémoire. À toi d’en faire autant. Trouve les objets m’appartenant dans cette maison, ils te mettront sur la bonne voie.",
     enonce: "",
     reponsesProposees: [],
     bonneReponse: ["", ""],
@@ -173,8 +170,7 @@ const enigmes = [
   {
     objet: "adaLovelace",
     titre: "Ada Lovelace(1815-1853)",
-    courteHistoire:
-      "Née à Londres, je décéderai dans la même ville. Vous connaissez certainement mon père, le célèbre Lord Byron. C’est ma mère qui s'occupera de moi, me destinant à être mathématicienne ou scientifique, ce qui était inhabituel pour une femme à cette époque.J'ai eu la chance de faire la rencontre de Charles Babbage à 17 ans, alors qu'il tentait de construire une machine à calcul qu'il voulait nommer : la machine analytique. J'ai d'ailleurs rédigé une note, dans laquelle je décris comment réaliser un calcul mathématique complexe avec cette machine, décrivant les étapes à réaliser en fonction de la position de ses rouages et comment lui permettre d’arriver à un résultat donné. On peut dire que je suis la première à avoir formalisé le principe de programmation et fait donc de moi la première codeuse au monde ! Je n'ai malheureusement pas survécu à mon cancer, ce qui fait que la machine analytique a probablement perdu sa plus belle chance de voir le jour et, ainsi, de devenir le premier calculateur mécanique avec un siècle d’avance.Il y a dans la pièce où tu te trouves, des objets qui m'appartiennent et qui t'aideront à retrouver ce cher Linus. Je laisse le destin de la programmation entre tes mains...",
+    courteHistoire: "Née à Londres, je décéderai dans la même ville. Vous connaissez certainement mon père, le célèbre Lord Byron. C’est ma mère qui s'occupera de moi, me destinant à être mathématicienne ou scientifique, ce qui était inhabituel pour une femme à cette époque.J'ai eu la chance de faire la rencontre de Charles Babbage à 17 ans, alors qu'il tentait de construire une machine à calcul qu'il voulait nommer : la machine analytique. J'ai d'ailleurs rédigé une note, dans laquelle je décris comment réaliser un calcul mathématique complexe avec cette machine, décrivant les étapes à réaliser en fonction de la position de ses rouages et comment lui permettre d’arriver à un résultat donné. On peut dire que je suis la première à avoir formalisé le principe de programmation et fait donc de moi la première codeuse au monde ! Je n'ai malheureusement pas survécu à mon cancer, ce qui fait que la machine analytique a probablement perdu sa plus belle chance de voir le jour et, ainsi, de devenir le premier calculateur mécanique avec un siècle d’avance.Il y a dans la pièce où tu te trouves, des objets qui m'appartiennent et qui t'aideront à retrouver ce cher Linus. Je laisse le destin de la programmation entre tes mains...",
     enonce: "",
     reponsesProposees: [],
     bonneReponse: ["", ""],
@@ -183,33 +179,33 @@ const enigmes = [
   },
   {
     objet: "postIt1",
-    titre: "",
+    titre: "Note à moi-même",
     courteHistoire:
       "Quand quelqu'un de triste joue aux jeux vidéo pour oublier, on peut dire qu'il se console.",
     enonce: "",
-    reponsesProposees: [],
-    bonneReponse: ["", ""],
+    reponsesProposees: ["continuer"],
+    bonneReponse: ["continuer"],
     indice: "",
     cle: "",
   },
   {
     objet: "postIt2",
-    titre: "",
+    titre: "Note à moi-même",
     courteHistoire:
       "Quand est ce que Windows ne bug pas ?<br>Quand l'ordinateur est éteint.",
     enonce: "",
-    reponsesProposees: [],
-    bonneReponse: ["", ""],
+    reponsesProposees: ["continuer"],
+    bonneReponse: ["continuer"],
     indice: "",
     cle: "",
   },
   {
     objet: "postIt3",
-    titre: "",
+    titre: "Note à moi-même",
     courteHistoire: "De quelle couleur sont tes yeux ?<br> #1292f4 et toi ? :)",
     enonce: "",
-    reponsesProposees: [],
-    bonneReponse: ["", ""],
+    reponsesProposees: ["continuer"],
+    bonneReponse: ["continuer"],
     indice: "",
     cle: "",
   },
@@ -248,7 +244,7 @@ function verifyResponse(val, objet) {
   if (enigme.objet !== undefined && enigme.objet !== null) {
     let bonneReponse = false;
     enigme.bonneReponse.forEach((reponse) => {
-      if (val === reponse) {
+      if (val.toLowerCase() === reponse) {
         bonneReponse = true;
       }
     });
@@ -286,12 +282,13 @@ function verifyResponse(val, objet) {
 
 window.showEnigma = function (objet) {
   let enigme = enigmes.find((e) => e.objet === objet);
+  let popupEnigme = '';
   if ($(`.enigme`).length === 0) {
     if (enigme.objet !== undefined && enigme !== null) {
-      let popupEnigme = `<div class="enigme popup" id="enigme-${enigme.objet}"><i class="fas fa-info-circle info"></i><i class="far fa-times-circle close"></i>`;
+      popupEnigme = `<div class="enigme popup" id="enigme-${enigme.objet}"><i class="fas fa-info-circle info"></i><i class="far fa-times-circle close"></i>`;
       popupEnigme += `<p class="titre-enigme">${enigme.titre}</p>`;
       popupEnigme += `<p class="histoire-enigme">${enigme.courteHistoire}</p>`;
-      popupEnigme += `<p class="text-enigme">Voici votre énigme :<br/> <br/>${enigme.enonce}</p>`;
+      popupEnigme += `<p class="text-enigme"><span>Voici votre énigme :</span><br/>${enigme.enonce}</p>`;
       if (enigme.reponsesProposees.length === 0) {
         popupEnigme += '<input type="text" class="ipt-enigme" autofocus/>';
       } else {
