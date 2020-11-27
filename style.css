@@ -117,7 +117,7 @@ section p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 45%;
   background-color: white;
   border: 1px solid #b8b5b5;
   border-radius: 5px;
@@ -125,18 +125,29 @@ section p {
   text-align: center;
 }
 .text-enigme {
+  width: 75%;
+  margin: auto;
   color: #53917e;
   font-size: 18px;
   letter-spacing: 2px;
 }
-.popup .far {
+.close,
+.info {
+  font-size: 20px;
   position: absolute;
-  top: 8px;
-  right: 10px;
   color: #b8b5b5;
+  top: 10px;
 }
-.enigme p {
-  color: #212d40;
+.close {
+  right: 12px;
+}
+
+.info {
+  left: 12px;
+}
+.infotext {
+  color: #455c81;
+  font-size: 16px;
 }
 .reponse-enigme,
 input {
@@ -153,14 +164,15 @@ input {
   color: #fff;
 }
 button {
-  width: 175px;
-  height: 25px;
+  width: 35%;
+  height: 30px;
   display: block;
   margin: 15px auto 5px auto;
   border: 0;
   background-color: #212d40;
   color: white;
   border-radius: 8px;
+  font-size: 18px;
 }
 .resultat-enigme-text {
   text-transform: uppercase;
@@ -169,6 +181,8 @@ button {
 .resultat-enigme {
   z-index: 1;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
 }
 .win {
   color: #53917e;
@@ -182,18 +196,24 @@ button {
   font-size: 25px;
 }
 
-.info {
-  color: #b8b5b5;
-  position: absolute;
-  top: 8px;
-  left: 10px;
-}
 .titre-enigme {
   text-decoration: underline overline;
-  letter-spacing: 2px;
-  font-size: 20px;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 .histoire-enigme {
   font-style: italic;
+  font-size: 18px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.text-enigme span {
+  text-decoration: underline;
+  font-weight: 600;
+}
+.titre-enigme,
+.histoire-enigme {
+  color: #212d40;
   letter-spacing: 2px;
 }
